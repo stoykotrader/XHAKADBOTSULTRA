@@ -1357,7 +1357,6 @@ const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZ
 const TG_TOKEN = '8944385053:AAGa3OWhF3eW-M_YzMz2Gpb4riE9ckreWXI';
 const TG_CHAT = '8389217733';
 const ADMIN_HASH = 6760;
-const ALLOWED_DOMAIN = 'stoykotrader.github.io';
 const DERIV_WS = 'wss://ws.binaryws.com/websockets/v3?app_id=1089';
 
 // ══════════════════════════════════════════════════════
@@ -1366,11 +1365,7 @@ const DERIV_WS = 'wss://ws.binaryws.com/websockets/v3?app_id=1089';
 // ── Domain lock ──
 (function() {
   const h = location.hostname;
-  const allowed = ['stoykotrader.github.io', 'localhost', '127.0.0.1', ''];
-  if (!allowed.includes(h)) {
-    document.body.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100vh;font-family:monospace;color:red;background:#000;text-align:center;padding:20px"><div><div style="font-size:50px;margin-bottom:16px">🔒</div><div style="font-size:18px">ACCESO DENEGADO</div><div style="font-size:13px;margin-top:8px;color:#666">Esta aplicación solo funciona en su dominio autorizado.</div></div></div>';
-    return;
-  }
+  // Sin restricción de dominio
 })();
 
 // Block DevTools
